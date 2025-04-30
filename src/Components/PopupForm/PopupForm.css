@@ -1,0 +1,310 @@
+.modal-overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(0, 0, 0, .3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+  }
+  
+  .modal-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    width: 700px;
+    height: 450px;
+    display: flex;
+    gap: 30px;
+    position: relative; /* Close button is positioned relative to this */
+  }
+
+  .height {
+    height: 520px;
+  }
+  
+  .modal-content .closeButton {
+    position: absolute; /* Position it inside the modal content */
+    top: 15px; /* Adjust distance from the top of modal-content */
+    right: 15px; /* Adjust distance from the right of modal-content */
+    width: 15px;
+    cursor: pointer; /* Add a pointer to enhance UX */
+  }
+  
+  .modal-content .left,
+  .modal-content .right {
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* .modal-content .left {
+    width: 40%;
+  } */
+  
+  .modal-content .left img {
+    width: 150px;
+    /* margin-top: -20px; */
+  }
+
+  .modal-content .left p {
+    margin-top: 50px;
+  }
+  
+  .modal-content .contact-col {
+    margin-top: 30px;
+  }
+  
+  .modal-content .contact-col h1 {
+    color: #17254e;
+    text-align: left;
+    font-size: 30px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .modal-content .contact-col h1 .color {
+    color: #ff9210;
+  }
+  
+  .modal-content .contact-col form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .modal-content .contact-col form input, .modal-content .contact-col form select, .modal-content .contact-col form option {
+    display: block;
+    width: 100%;
+    background: white;
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    resize: none;
+  }
+  
+  .modal-content .contact-col form label {
+    text-align: left; /* Align labels to the left */
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .modal-content .contact-col .result {
+    display: flex;
+    /* margin: 20px 0; */
+    margin-top: -20px;
+  }
+  
+  .modal-content .btn1 {
+    background: linear-gradient(60deg, #3a4b7c 10%, #2d3f69 50%, #17254e 100%); 
+    border: 0px solid #150485;
+    border-radius: 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.25s ease;
+    width: 150px;
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 30px;
+  }
+  .modal-content .btn1:hover {
+    box-shadow: 0px 2px 15px 0px #17254e;
+    color: #333;
+  }
+
+  .modal-content .btn1:not(.loading):hover {
+    box-shadow: 0px 2px 15px 0px #17254e;
+    color: #333;
+  }
+  .modal-content .btn1:not(.loading):hover i {
+    transform: translate(7px);
+  }
+  
+  .modal-content .btn1 i {
+    font-size: 1.45rem;
+    position: absolute;
+    left: 0px;
+    pointer-events: none;
+    z-index: 10;
+    background: inherit;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.25s ease;
+  }
+  
+  .modal-content .btn1 i img {
+    width: 20px;
+  }
+  
+  .modal-content .btn1 .text{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    position: absolute;
+    left: 20px;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    color: white;
+  }
+
+  .modal-content .loading-animate{
+    position:absolute;
+    width:60px;
+    height:60px;
+    z-index:100;
+    border-radius: 50%;
+    top: -5px;
+    left:-5px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.25s ease;
+  }
+  .modal-content .loading-animate:after{
+    content:'';
+    width:44px;
+    height:44px;
+    border-radius: 50%;
+    border:3px solid transparent;
+    border-left: 3px solid #fff;
+    animation:loading infinite 0.8s ease 0.05s;
+    position:absolute;
+  }
+  .modal-content .loading-animate:before{
+    content:'';
+    width:44px;
+    height:44px;
+    border-radius: 50%;
+    border:3px solid transparent;
+    border-left: 3px solid #fff;
+    animation:loading infinite 0.8s linear;
+    position:absolute;
+    opacity: 0.6;
+  }
+  .modal-content .btn1.loading{
+    width:50px;
+  }
+  .modal-content .btn1.loading i{
+    transform:rotate(-90deg);
+    padding-bottom: 4px;
+    padding-left:3px;
+  }
+  .modal-content .btn1.loading .text{
+    transform:translate(-140px);
+  }
+  .modal-content .btn1.loading .loading-animate{
+    opacity: 1;
+  }
+  @keyframes loading{
+    0%{
+      transform:rotate(0deg);
+    }
+    100%{
+      transform:rotate(360deg);
+    }
+  }
+  
+  @media only screen and (max-width:768px) {
+    .modal-content {
+        display: block;
+        height: auto;
+        width: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 0px;
+    }
+    .modal-content .contact-col {
+      margin-top: 0px;
+    }
+    
+    .modal-content .contact-col form {
+      width: 300px;
+      padding-bottom: 30px;
+    }
+  
+    .modal-content .left,
+    .modal-content .right {
+      width: 100%;
+    }
+  
+    .modal-content .left img {
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .modal-content .left p {
+        display: none;
+      }
+
+      .modal-content .btn1 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+    .modal-content h1 {
+      text-align: center;
+    }
+  
+    .modal-content .right {
+      margin-top: 50px;
+    }
+  }
+  
+  @media only screen and (max-width:380px) {
+    .modal-overlay {
+      background: rgba(0, 0, 0, .5);
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  
+    .modal-content {
+      padding: 20px;
+    }
+  
+    .modal-content .left img {
+      display: none;
+    }
+  
+    .modal-content .contact-col form {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      align-items: center;
+      justify-content: center;
+      width: 280px;
+    }
+  }

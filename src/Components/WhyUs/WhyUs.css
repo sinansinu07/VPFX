@@ -1,0 +1,92 @@
+.whyus {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.whyus .item-container {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.whyus .item-container .items {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.whyus .item-container .items .items-content {
+    margin-top: 20px;
+}
+
+.whyus .item-container .items img {
+    width: 120px;
+}
+
+.whyus .item-container .items .items-content p {
+    margin-top: 10px;
+}
+
+.whyus .btn.button-touch2 {
+    position: relative;
+    padding: 10px 30px;
+    background-color: #17254e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center; /* Aligns text and line vertically */
+    height: 45px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+  }
+  
+  .whyus .btn:hover {
+    background-color: #17254e;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  }
+  
+  .whyus .btn.button-touch2 .line {
+    margin-left: 10px;
+    position: relative;
+    width: 70px; /* Fixed width for the line */
+    height: 2px;
+    background-color: white;
+  }
+  
+  .whyus .btn.button-touch2 .circle {
+    position: absolute;
+    top: -3px; /* Position the circle to align with the middle of the text */
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    animation: moveCircle 4s linear infinite;
+  }
+  
+  .whyus .btn.button-touch2:hover {
+    background: white;
+    color: #17254e;
+  }
+  
+  .whyus .btn.button-touch2:hover .line {
+    background: #17254e;
+    color: #17254e;
+  }
+  
+  .whyus .btn.button-touch2:hover .circle {
+    background: #17254e;
+    color: #17254e;
+  }

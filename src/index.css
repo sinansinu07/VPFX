@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* colors: {
+  primary: "#17254e",
+  secondary: "#e9782b",
+  brandDark: "#270c03",
+  dark: "#1e1e1e",
+  light: "#f5f5f5",
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Source Sans Pro", sans-serif; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+
+section{
+  height: 100%;
+  scroll-snap-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  margin: 0;
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul li {
+  list-style: none;
+}
+
+.commonHeading {
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.commonHeading span {
+  color: #e9782b;
+}
+
+.color {
+  color: #e9782b;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.container {
+  /* overflow: hidden; */
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.container1 {
+  /* overflow: hidden; */
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btn {
+  background: white;
+  color: #212121;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 30px;
+  border: 0;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px
+  }
+
+  .container1 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .commonHeading {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px
+  }
+}

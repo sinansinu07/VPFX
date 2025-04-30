@@ -1,0 +1,519 @@
+.navbar nav {
+    width: 100%;
+    height: 70px;
+    /* background: white; */
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    position: fixed; /* Ensure the navbar is always fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ensure it stays on top */
+    padding: 0; /* Adjust padding as necessary */
+    /* overflow: hidden; */
+    /* margin-top: -10px; */
+}
+
+.navbar .dark-nav {
+    background: white;
+    color: #000;
+    text-shadow: none;
+}
+
+.navbar .dark-nav ul li a:hover,
+.navbar .dark-nav ul li a:focus,
+.navbar .dark-nav ul li a.active {
+    color: #e9782b; /* Change the text color on hover or active */
+}
+
+.navbar .dark-nav ul li a:hover::after,
+.navbar .dark-nav ul li a:focus::after,
+.navbar .dark-nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position underline below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #e9782b; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+.navbar .dark-nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #e9782b;
+    transition: width 0.3s ease-in-out; /* Animate the underline width on hover */
+}
+
+.navbar .navbar-ul li a:hover,
+.navbar .navbar-ul li a:focus,
+.navbar .navbar-ul li a.active {
+    color: #e9782b; /* Change the text color on hover or active */
+}
+
+.navbar .navbar-ul li a:hover::after,
+.navbar .navbar-ul li a:focus::after,
+.navbar .navbar-ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position underline below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #e9782b; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+.navbar .navbar-ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #e9782b;
+    transition: width 0.3s ease-in-out; /* Animate the underline width on hover */
+}
+
+.navbar .btn1 {
+    background: #e9782b;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 25px;
+    border-radius: 30px;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}   
+
+.navbar .btn1:hover {
+    background-color: white;
+    color: #e9782b;
+    cursor: pointer;
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+  }
+
+.navbar .logo {
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    width:100px;
+    margin-left: 50px;
+}
+
+.navbar .logobg {
+    /* padding-top: 5px;
+    padding-bottom: 5px; */
+    width:120px;
+    margin-left: 50px;
+}
+
+/* .navbar ul {
+    margin-right: 50px;
+} */
+
+.navbar nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 3px 15px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar .flag {
+    width: 30px;
+    /* margin-left: 0px; */
+}
+
+.navbar .flag:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.navbar .phone-number {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.navbar .phone-number:hover {
+    color: #e9782b;
+}
+
+/* .dark-nav .phone-number:hover {
+    color: black;
+} */
+
+.navbar nav ul li a {
+    text-decoration: none; /* Remove default underline */
+    color: inherit; /* Inherit text color */
+    position: relative;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a:focus,
+.navbar nav ul li a.active {
+    color: #e9782b; /* Change the text color on hover or active */
+}
+
+.navbar nav ul li a:hover::after,
+.navbar nav ul li a:focus::after,
+.navbar nav ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position underline below the text */
+    width: 100%;
+    height: 2px;
+    background-color: #e9782b; /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+}
+
+.navbar nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #e9782b;
+    transition: width 0.3s ease-in-out; /* Animate the underline width on hover */
+}
+
+/* Dropdown styling */
+.navbar .dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    /* left: 0; */
+    background-color: white;
+    padding: 5px 0;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: -70px;
+  }
+  
+.navbar .dropdown-item {
+    padding: 8px 15px;
+    color: black;
+    white-space: nowrap;
+  }
+
+  .navbar .dropdown-item a {
+    font-size: 14px;
+  }
+
+  .navbar .dropdown-icon {
+    font-size: large;
+    /* margin-top: 10px; */
+  }
+  /* .dropdown-item:hover {
+    color: #BE3030;
+  } */
+
+.navbar .flag-number {
+    display: flex; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .flag-number-mobile {
+    display: none; /* Use flexbox to align items */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar .toggle {
+    display: none;
+}
+
+.navbar .menuIcon {
+    display: none;
+}
+
+.navbar .phoneIcon {
+    width: 30px;
+    transition: 0.3s;
+}
+
+.navbar .whatsappIcon {
+    width: 30px;
+    transition: 1s;
+}
+
+.navbar .phoneIcon:hover {
+    transform: rotate(45deg); /* Rotate 45 degrees on hover */
+    transition: 0.3s;
+}
+
+.navbar .whatsappIcon:hover {
+    transform: rotate(360deg); /* Rotate 45 degrees on hover */
+    transition: 1s;
+}
+
+/* .navbar .btn2 {
+    background: white;
+    color: black;
+} */
+
+.navbar .btn2:hover {
+    background: #17254e;
+    color: white;
+    text-decoration: none;
+}
+
+/* .navbar .btn2 a:hover {
+    color: #BE3030 !important
+} */
+
+.navbar .btn1 a:hover::after,
+.navbar .btn1 a:active::after,
+.navbar .btn1 a:focus::after {
+    text-decoration: none !important
+}
+
+.navbar .btn-mobile {
+    display: none;
+}
+
+.navbar .social-links {
+    display: none;
+}
+
+.navbar .mail-phone-mobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 1330px) {
+    .navbar nav ul li {
+        margin: 10px 15px;
+    }
+
+    .navbar .flag, .navbar .phone-number {
+        display: none;
+    }
+    .navbar ul {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+
+    .navbar nav ul {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: white; 
+        width: -300px;
+        padding-top: 70px;
+        /* transition: 0.5s; */
+        margin-top: -10px;
+        overflow-y: scroll;
+        text-shadow: none;
+    }
+
+    .navbar nav ul li {
+        display: block;
+        margin: 25px 20px;
+        color: #000;
+    }
+
+    .navbar .dark-nav ul li a:hover,
+    .navbar .dark-nav ul li a:focus,
+    .navbar .dark-nav ul li a.active {
+        color: #e9782b; /* Change the text color on hover or active */
+    }
+    
+    .navbar .dark-nav ul li a:hover::after,
+    .navbar .dark-nav ul li a:focus::after,
+    .navbar .dark-nav ul li a.active::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px; /* Position underline below the text */
+        width: 100%;
+        height: 2px;
+        background-color: #e9782b; /* Underline color */
+        transition: width 0.3s ease-in-out; /* Smooth transition for the underline */
+    }
+    
+    .navbar .dark-nav ul li a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #e9782b;
+        transition: width 0.3s ease-in-out; /* Animate the underline width on hover */
+    }
+
+    .navbar nav {
+        padding: 15px 0;
+        margin: 0;
+    }
+
+    .navbar .navbar {
+        margin: 0;
+    }
+
+    .navbar nav ul {
+        margin-right: 0;
+        width: 300px;
+    }
+    /* Hide these elements on larger screens */
+    .navbar .btn1 {
+        display: none;
+    }
+
+    /* Display flag, phone number, and button below mobile menu */
+    .navbar .btn-mobile {
+        display: block;
+        margin: 15px 20px;
+        color: white;
+        text-align: center;
+    }
+
+    .navbar .flag-number .flag, .navbar .flag-number .phone-number {
+        display: block;
+    }
+
+    .navbar .flag-number {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10px; /* Adjust as necessary */
+        padding-right: 10px; /* Adjust as necessary */
+    }
+
+    .navbar .flag-mobile {
+        width: 30px;
+    }
+
+    .navbar .btn-mobile {
+        padding: 14px 20px;
+        border-radius: 30px;
+        background: #BE3030;
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .navbar .btn-mobile:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .navbar .dark-nav .btn-mobile {
+        background: #BE3030;
+        color: white;
+    }
+
+    .navbar .dark-nav .btn-mobile:hover {
+        background-color: black;
+        color: white;
+    }
+
+    .navbar nav .menuIcon {
+        margin-right: 50px;
+        display: block;
+        width: 30px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    .navbar .hide-mobile-menu {
+        margin-right: -300px;
+    }
+
+    .navbar .mail-phone-mobile {
+        display: block;
+        margin-left:20px;
+        margin-top: 50px;
+    }
+
+    .navbar .mail-phone-mobile li {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+      }
+
+    .navbar .mail-phone-mobile .side-logo {
+        margin-top: 20px;
+        margin-left: 0px;
+        width: 200px;
+    }
+
+    .navbar .mail-phone-mobile img {
+        width: 25px;
+        margin-right: 10px;
+      }
+    .navbar .mail-phone-mobile p {
+        margin-top: 10px;
+        font-size: 14px;
+        color: black;
+      }
+
+    .navbar .social-links {
+        margin-left: -20px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        padding: 5px 0 5px 0;
+        padding-bottom: 30px;
+      }
+      
+      .navbar .social {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 40px;
+        margin-left: 15px;
+        cursor: pointer;
+        z-index: 1000;
+      }
+}
+
+@media screen and (max-width: 700px) {
+    .navbar .flag-number .flag, .navbar .flag-number .phone-number {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar .logo {
+        /* width: 220px; */
+        margin-left: 20px;
+    }
+
+    .navbar .black-logo {
+        width: 180px;
+        margin-left: 40px;
+    }
+
+    .navbar .menuIcon {
+        width: 22px;
+        margin-right: 50px;
+    }
+}

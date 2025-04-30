@@ -1,0 +1,283 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100vh; /* Adjusts video height to the viewport */
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero .hero-content {
+    position: absolute;
+    color: white;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* max-width: 1000px; */
+    z-index: 2;
+}
+
+.hero .hero-content h1 {
+  font-size: 50px;
+  max-width: 700px;
+  text-align: center;
+  margin-right: auto;
+}
+
+.hero .hero-content h2 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 800;
+  max-width: 700px;
+  text-align: center;
+  margin-right: auto;
+  /* color: #17254e; */
+}
+
+.hero .btn.button-touch2 {
+  position: relative;
+  padding: 10px 30px;
+  background-color: #17254e;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Aligns text and line vertically */
+  height: 45px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.hero .btn:hover {
+  background-color: #17254e;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+}
+
+.hero .btn.button-touch2 .line {
+  margin-left: 10px;
+  position: relative;
+  width: 70px; /* Fixed width for the line */
+  height: 2px;
+  background-color: white;
+}
+
+.hero .btn.button-touch2 .circle {
+  position: absolute;
+  top: -3px; /* Position the circle to align with the middle of the text */
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: moveCircle 4s linear infinite;
+}
+
+.hero .btn.button-touch2:hover {
+  background: white;
+  color: #17254e;
+}
+
+.hero .btn.button-touch2:hover .line {
+  background: #17254e;
+  color: #17254e;
+}
+
+.hero .btn.button-touch2:hover .circle {
+  background: #17254e;
+  color: #17254e;
+}
+
+@keyframes moveCircle {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.hero .scroll {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  bottom: 10%;
+  z-index: 1000;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .scroll img {
+  width: 30px;
+}
+
+.hero .scroll h1 {
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.hero .whatsapp-icon {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.hero .whatsapp-icon:hover {
+  transform: scale(1.05);
+}
+
+/* Hero.module.css */
+
+.hero .dotsContainer {
+  position: absolute;
+  z-index: 10;
+  /* position: fixed; */
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem; /* Tailwind 'mt-2' equivalent */
+  padding-bottom: 1.25rem; /* Tailwind 'pb-5' equivalent */
+  gap: 0.5rem; /* Tailwind 'space-x-2' equivalent */
+}
+
+.hero .dot {
+  width: 1rem; /* Tailwind 'w-3' equivalent */
+  height: 1rem; /* Tailwind 'h-3' equivalent */
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.2s ease; /* Tailwind 'transition duration-200' equivalent */
+}
+
+.hero .dotActive {
+  background-color: #e9782b; /* Tailwind 'bg-secondary' equivalent */
+}
+
+.hero .dotInactive {
+  background-color: white; /* Tailwind 'bg-white' equivalent */
+  border: 2px solid #17254e;
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero .hero-content {
+    text-align: center;
+    padding-left: 20px;
+    padding-left: 20px;
+  }
+
+  .hero .hero-content h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .hero .btn.button-touch2 {
+    text-align: center;
+    margin-left: auto;
+  }
+
+  .hero .whatsapp-icon {
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+  }
+  
+  .hero .scroll img {
+      width: 17px;
+  }
+  
+  .hero .scroll h1 {
+      font-size: 12px;
+  }
+  .hero .btn.button-touch2 {
+    padding: 10px 15px;
+    height: 45px;
+    font-size: 16px;
+  }
+  
+  .hero .btn.button-touch2 .line {
+    margin-left: 10px;
+    position: relative;
+    width: 50px; /* Fixed width for the line */
+    height: 2px;
+    background-color: white;
+  }
+}
+
+/* Hide WhatsApp icon on very small screens */
+@media (max-width: 500px) {
+  .hero .whatsapp-icon {
+      display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero .hero-content h1 {
+    font-size: 22px;
+  }
+}
+
+/* Adjustments for shorter viewports */
+@media (max-height: 800px) {
+  .hero video {
+      height: 800px;
+  }
+}
+
+@media (max-height: 700px) {
+  .hero video {
+      height: 700px;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero video {
+      height: 600px;
+  }
+}
